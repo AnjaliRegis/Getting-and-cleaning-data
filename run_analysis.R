@@ -107,6 +107,6 @@ test_train_with_actvity_labels<-select(test_train_with_actvity_labels,-activityi
 
 Aggdata<-aggregate(x=test_train_with_actvity_labels[,-c(1,2)],by=list("subjectid"=test_train_with_actvity_labels$subjectid,"activity"=test_train_with_actvity_labels$activityname),FUN="mean")
 
-write.table(Aggdata, file = "./tidy_data.txt")
+write.table(Aggdata, file = "./tidy_data.txt",row.names=FALSE)
 
 
